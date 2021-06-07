@@ -1,0 +1,12 @@
+{
+  "app": "mvn package && mvn -e -q exec:java -pl cdk -Dexec.mainClass=com.sstec.cdk.cicd.CICDApp",
+  "context": {
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "@aws-cdk/aws-secretsmanager:parseOwnedSecretName": true,
+    "@aws-cdk/aws-kms:defaultKeyPolicies": true,
+    "@aws-cdk/core:newStyleStackSynthesis": true
+  }
+}
